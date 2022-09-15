@@ -130,3 +130,20 @@ something will print out the result
 #     print("Slytherin")
 #   case _:
 #     print("Who?")
+
+a = 10
+b = [2,4,6,8]
+for i in range(a):
+  print(i)
+for i in range(len(b)):
+  print(i)
+
+
+students = {
+ "Harry": "Gryffindor",
+ "Hermione": "Gryffindor",
+ "Ron": "Gryffindor",
+ "Draco": "Slytherin"
+}
+for stu in students:
+ print(stu, students[stu], sep=", ")
