@@ -131,19 +131,65 @@ something will print out the result
 #   case _:
 #     print("Who?")
 
-a = 10
-b = [2,4,6,8]
-for i in range(a):
-  print(i)
-for i in range(len(b)):
-  print(i)
+# a = 10
+# b = [2,4,6,8]
+# for i in range(a):
+#   print(i)
+# for i in range(len(b)):
+#   print(i)
 
 
-students = {
- "Harry": "Gryffindor",
- "Hermione": "Gryffindor",
- "Ron": "Gryffindor",
- "Draco": "Slytherin"
-}
-for stu in students:
- print(stu, students[stu], sep=", ")
+# students = {
+#  "Harry": "Gryffindor",
+#  "Hermione": "Gryffindor",
+#  "Ron": "Gryffindor",
+#  "Draco": "Slytherin"
+# }
+# for stu in students:
+#  print(stu, students[stu], sep=", ")
+
+# SyntaxError
+
+# print("hello world )
+
+# print(hello world")
+
+# print("hello world"
+
+# ValueError 
+
+# try:
+#   name = int(input("What is your name? "))
+#   print(f"Good morning, {name}")
+# except :
+#   print("name must be an int")
+
+# def get_int():
+#   while True:
+#     try:
+#       x = int(input("What's x? "))
+#     except ValueError:
+#       print('x is not an integer')
+#     else: return x
+
+# def main():
+#   x = get_int()
+#   print(f"X value: {x}")
+
+# main()
+
+def register(backList, host):
+  while True:
+    try:
+      x = int(input("What's id? "))
+      if x == host:
+        raise KeyError("id cannot match with host")
+      if x in backList:
+        raise KeyError("id in backlist. Poor for you")
+    except ValueError:   
+      pass
+    else:
+      print(f"{x} is successful register")
+      break
+
+register([222,333,444], 111)
